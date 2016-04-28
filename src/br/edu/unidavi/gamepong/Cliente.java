@@ -17,7 +17,7 @@ public class Cliente {
    public static void main(String[] args) 
          throws UnknownHostException, IOException {
      
-     // dispara cliente
+     // Dispara ip do cliente
      new Cliente("10.3.4.16", 12345).executa();
    }
    
@@ -33,7 +33,7 @@ public class Cliente {
      Socket cliente = new Socket(this.host, this.porta);
      System.out.println("Cliente Conectado!");
  
-     //thread que recebe mensagens do servidor
+     // Thread responsavel por recerber mensagens do servidor
      Recebedor r = new Recebedor(cliente.getInputStream());
      new Thread(r).start();
      
