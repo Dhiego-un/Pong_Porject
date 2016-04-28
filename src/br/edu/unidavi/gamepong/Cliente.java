@@ -37,7 +37,7 @@ public class Cliente {
      Recebedor r = new Recebedor(cliente.getInputStream());
      new Thread(r).start();
      
-     // Lê as mensagens e manda para o servidor.
+     // Lê as mensagens e manda para  servidor.
      Scanner teclado = new Scanner(System.in);
      PrintStream saida = new PrintStream(cliente.getOutputStream());
      while (teclado.hasNextLine()) {
